@@ -1,0 +1,7 @@
+[user]
+	name = Marta Binkowska
+	email = 109827646+maarbin@users.noreply.github.com
+[core]
+	editor = nano
+[init]
+	defaultBranch = main
