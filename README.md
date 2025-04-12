@@ -1,18 +1,45 @@
-1. Install Apple's CLI, which are prerequisites for Git and Homebrew
+# Dotfiles Setup Guide (macOS)
+
+## 1. Install Apple's Command Line Tools (required for Git and Homebrew)
+
+```bash
 xcode-select --install
+```
 
-2. Clone repo into new hidden directory
-# After setting up SSH
+---
+
+## 2. Clone the Dotfiles Repository into a Hidden Directory
+
+> ⚠️ Make sure you've set up SSH access to GitHub first.
+
+```bash
 git clone git@github.com:maarbin/dotfiles.git ~/.dotfiles
+```
 
-3.Create symlinks in the Home directory to the real files in the repo.
+---
+
+## 3. Create Symlinks in the Home Directory
+
+Link your config files from the repo to your home directory:
+
+```bash
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+```
 
-4. Install Homebrew, followed by the software listed in the Brewfile
-# Install Homebrew
-/bin/bash -c "$curl -fsSL https://raw.githubercontent.com/Homebrew/install/HEAD/install.sh)"
+---
 
-# Pass Brewfile location
+## 4. Install Homebrew and Packages from Brewfile
+
+### Install Homebrew
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### Install Software from the Brewfile
+
+```bash
 brew bundle --file ~/.dotfiles/Brewfile
+```
 
